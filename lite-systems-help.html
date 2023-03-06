@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lite Systems Help</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Lite Systems Help</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="lite-systems.html">Lite Systems</a></li>
+            <li><a href="lite-nt.html">Lite NT</a></li>
+            <li><a href="lite-surface.html">Lite Surface</a></li>
+            <li><a href="litech.html">Litech</a></li>
+            <li><a href="https://padlet.com/litesystems/iv2w1tw5qw8mpg4d">LiTe Downloading</a></li>
+            <li><a href="uefi-y-mixu.html">Mixu y UEFI</a></li>
+            <li><a href="lite-catos.html">Lite CatOS</a></li>
+            <li><a href="lite-libs.html">Lite Libs</a></li>
+            <li><a href="https://surfacesystems.github.io/susrface-software.github.io/lite-systems-help.html">Lite Systems Help</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Sistemas:</h1>
+        <p>Seleccione un sistema de aqui abajo para obtener ayuda: (no se a incluido Writing Machine por que demomento no tiene inovaciones)</p>
+        
+<button type="button" class="collapsible">CatOS</button>
+<div class="content">
+  <p>Estos son los comandos de la ultima version:</p>
+  <ul>
+    <li>exit -> Exit the system.</li>
+    <li>.help -> Shows this list.</li>
+    <li>get-fs -> Shows all files in the system folder</li>
+    <li>cat --ver -> Shows the version of the OS</li>
+    <li>print 'text' -> Prints the variable text with the determinated options</li>
+    <li>cat -sta-key -> Shows the start key</li>
+    <li>cat -debug 'filename' -> Runs the selected .cpm file</li>
+    <li>clear -> Clears the window</li>
+    <li>pause -> Pause the system</li>
+    <li>'filename'.cpm or 'filename' -> Debugs a .cpm file</li>
+    <li>readf 'filename' -> Shows the file content</li>
+    <li>lbat-c 'command' -> Run the selected cmd command</li>
+    <li>in -> Strores a user input in a variable called '(in)'</li>
+    <li>date -> Changes the date</li>
+    <li>get-cpm -> Gets all .cpm files in the directorie</li>
+    <li>cal 'filename without .cal.d' -> Opens the selected file in calendar</li>
+    <li>notes 'filename without .no.t' -> Open notes with the selected file.</li>
+    <li>copy 'text' -> Stores the text in a variable called '(paste)'</li>
+    <li>calc 'calculate' -> Shows the operation result. It can be called to return the calc as '(calc='calculate')'</li>
+    <li>var 'numero' 'texto' -> Saves a variable in the number selected and with the text selected and it can be called with '(vars='number')'</li>
+    <li>snake.cpm -> Runs snake</li>
+    <li>setcopy.cpm -> Run the copy set</li>
+    <li>chamap -> Selects a character of ASCII and put its in the clipboard</li>
+    <li>lbat-c chapmapmap.exe -> Shows all characters ASCII code</li>
+    <li>printp 'message' -> Shows the selected text with no new line</li>
+    <li>inpa -> Makes a input with new line at the start</li>
+  </ul>
+  <p>Aqui hay algunos ejemplos de archivos que puedes ejecutar poniendo "'nombre del archivo'.cpm":</p>
+  <h5>Hello World!:</h5>
+  <p class="f">
+    print Hello World!
+  </p>
+  <p>La funcion print llama al copilador a poner el mensaje seleccionado</p>
+  <h5>Calculadora:</h5>
+  <p class="f">
+    printp Introduzca un calculo:<br>
+    in<br>
+    printp La solucion es:<br> 
+    calc (in)
+  </p>
+  <p>La funcion printp hace que el texto no tenga una linea nueva y llama a una entrada de texto que luego se llama en la funcion "calc" y se hace le calculo. El sistema deberia dar un pantallazo azul despues de que el resultado no sea un numero.</p>
+  <h5>Iniciar sesión:</h5>
+  <p class="f">
+    print Iniciar sesion<br>
+    printp Nombre: <br>
+    in<br>
+    var 0 (in)<br>
+    printp Contraseña: <br>
+    inpa<br>
+    var 1 (in)
+    print Gracias por iniciar sesion
+  </p>
+  <p>La funcion var guarda los valores con un numero y se pueden llamar como "(vars=0)" = Usuario y "(vars=1)" = Contraseña. Luego, el comando inpa llama una entrda de texto pero tapa la entrada.</p>
+</div>
+    </section>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
